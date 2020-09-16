@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0344c1b81d4ab264ba6be470775c4fe4
+guid: f0082db35b493e744a5bd05fbb92c81c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Rocket Rinder
+  - Exan
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
