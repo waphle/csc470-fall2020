@@ -17,6 +17,6 @@ public class Rocket_Controller : MonoBehaviour
         //transform.Translate(Vector3.forward * Time.deltaTime);
 
         // Move the object upward in world space 1 unit/second. Source: https://docs.unity3d.com/ScriptReference/Transform.Translate.html
-        transform.Translate(Vector3.up * Time.deltaTime * 100, Space.World);
+        transform.Translate(Vector3.up * Time.deltaTime * 120, Space.World);
     }
 }
