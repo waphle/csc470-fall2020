@@ -17,15 +17,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 
     public void LaunchRocket()
     {
         Debug.Log("T-minus 3, 2, 1, lift off!");
-        Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-20,20)
-                                , ground.transform.position.y + 20,
-                                  ground.transform.position.z + Random.Range(-20,20));
+        Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35,35)
+                                , ground.transform.position.y,
+                                  ground.transform.position.z + Random.Range(-10,10));
         Instantiate(rocketPreFab, pos, Quaternion.identity);
     }
 }
