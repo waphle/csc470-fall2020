@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     float makeAlienTimer = 0.01f;
     float makeAlienRate = 0.25f;
+
+    int numRocket = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
                                 , ground.transform.position.y + 75,
                                   ground.transform.position.z + Random.Range(-55, 35));
             GameObject drop = Instantiate(alienPreFab, pos, Quaternion.identity);
-
+            Destroy(drop, 10f);
 
             makeAlienTimer = makeAlienRate;
         }
@@ -36,10 +39,21 @@ public class GameManager : MonoBehaviour
 
     public void LaunchRocket()
     {
-        Debug.Log("T-minus 3, 2, 1, lift off!");
-        Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35,35)
-                                , ground.transform.position.y,
-                                  ground.transform.position.z + Random.Range(-50,50));
-        Instantiate(rocketPreFab, pos, Quaternion.identity);
+        numRocket++;
+
+        if (numRocket < 10)
+        {
+            Debug.Log("T-minus 3, 2, 1, lift off!");
+            Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35, 35)
+                                    , ground.transform.position.y,
+                                      ground.transform.position.z + Random.Range(-50, 50));
+            Instantiate(rocketPreFab, pos, Quaternion.identity);
+        }
+        
+        else
+        {
+            SceneManager.LoadScene("Level");
+        }
+        
     }
 }
