@@ -41,19 +41,30 @@ public class GameManager : MonoBehaviour
     {
         numRocket++;
 
-        if (numRocket < 10)
-        {
-            Debug.Log("T-minus 3, 2, 1, lift off!");
-            Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35, 35)
-                                    , ground.transform.position.y,
-                                      ground.transform.position.z + Random.Range(-50, 50));
-            Instantiate(rocketPreFab, pos, Quaternion.identity);
-        }
-        
-        else
-        {
-            SceneManager.LoadScene("Level");
-        }
-        
+        Debug.Log("T-minus 3, 2, 1, lift off!");
+        Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35, 35)
+                                , ground.transform.position.y,
+                                  ground.transform.position.z + Random.Range(-50, 50));
+        Instantiate(rocketPreFab, pos, Quaternion.identity);
+
+        //if (numRocket < 15)
+        //{
+        //    //Debug.Log("T-minus 3, 2, 1, lift off!");
+        //    Vector3 pos = new Vector3(ground.transform.position.x + Random.Range(-35, 35)
+        //                            , ground.transform.position.y,
+        //                              ground.transform.position.z + Random.Range(-50, 50));
+        //    Instantiate(rocketPreFab, pos, Quaternion.identity);
+        //}
+
+        //else
+        //{
+        //    SceneManager.LoadScene("Level");
+        //}
+
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Level");
     }
 }
