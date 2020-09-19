@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     float makeAlienTimer = 0.01f;
     float makeAlienRate = 0.25f;
 
-    //int numRocket = 0;
+    int numRocket = 0;
 
     // Start is called before the first frame update
     void Start()
