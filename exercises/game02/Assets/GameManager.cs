@@ -68,3 +68,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 }
+// Final Commit.
