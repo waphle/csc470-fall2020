@@ -15,6 +15,8 @@ public class CellScript : MonoBehaviour
 
     private bool _alive = false;
 
+    public bool nextAlive;
+
     public bool Alive
     {
         get
@@ -48,4 +50,5 @@ public class CellScript : MonoBehaviour
     {
 
     }
+
 }
