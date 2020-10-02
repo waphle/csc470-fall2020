@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     bool simulate = true;
 
-    int gridWidth = 50;
-    int gridHeight = 50;
+    int gridWidth = 30;
+    int gridHeight = 75;
 
     //float cellWidth = 0.8f;
     //float cellHeight = 0.8f;
@@ -86,18 +86,9 @@ public class GameManager : MonoBehaviour
 
     List<CellScript> gatherLiveNeighbors(int x, int y) {
         List<CellScript> liveNeighbors = new List<CellScript>();
-        //for (int i = x - 1; i <= x + 1; i++) {
-        //    for (int j = y - 1; j <= y + 1; j++) {
-        //        if (!(x == i && y == j)) {
-        //            if (grid[i, j].Alive) {
-        //                liveNeighbors.Add(grid[i, j]);
-        //            }
-        //        }
-        //    }
-        //}
+
         for (int i = Mathf.Max(0, x - 1); i <= Mathf.Min(gridWidth - 1, x + 1); i++) {
             for (int j = Mathf.Max(0, y - 1); j <= Mathf.Min(gridHeight - 1, y + 1); j++) {
-                //Add all live neighbors of (x, y) excluding itself
                 if (!(x == i && y == j)) {
                     if (grid[i, j].Alive) {
                         liveNeighbors.Add(grid[i, j]);

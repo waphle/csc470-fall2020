@@ -12,8 +12,8 @@ public class CellScript : MonoBehaviour
     public int x = -1;
     public int y = -1;
 
-    float goalHeight = 1;
-    float growSpeed = 0.8f; // Column grow speed
+    float goalHeight = 3;
+    float growSpeed = 5f; // Column grow speed
 
     private bool _alive = false;
     public bool nextAlive;
@@ -41,7 +41,7 @@ public class CellScript : MonoBehaviour
     void Start()
     {
         //rend = gameObject.GetComponent<Renderer>();
-        this.Alive = Random.value < 0.1f; // How often the column changes
+        this.Alive = Random.value < 0.5f; // How many columns are changing
     }
 
 
