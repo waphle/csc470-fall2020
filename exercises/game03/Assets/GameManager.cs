@@ -10,20 +10,20 @@ public class GameManager : MonoBehaviour
 
     bool simulate = true;
 
-    int gridWidth = 100;
-    int gridHeight = 100;
+    int gridWidth = 50;
+    int gridHeight = 50;
 
     //float cellWidth = 0.8f;
     //float cellHeight = 0.8f;
 
-    float cellDimension = 0.8f;
-    float padding = 0.5f;
+    float cellDimension = 3;
+    float padding = 0.9f;
 
     float timer = 0;
     float timerRate = 0.5f;
     int time = 0;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         grid = new CellScript[gridWidth, gridHeight];
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         timer -= Time.deltaTime;
