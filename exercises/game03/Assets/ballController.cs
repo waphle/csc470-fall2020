@@ -14,10 +14,15 @@ public class ballController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Movement w/ WASD controls.
         Vector3 pos = transform.position;
 
         if (Input.GetKey("w")) { // Forward
             pos.z += speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey("a")) { // Left
+            pos.x -= speed * Time.deltaTime;
         }
 
         if (Input.GetKey("s")) { // Backwards
@@ -26,10 +31,6 @@ public class ballController : MonoBehaviour
 
         if (Input.GetKey("d")) { // Right
             pos.x += speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey("a")) { // Left
-            pos.x -= speed * Time.deltaTime;
         }
 
         transform.position = pos;

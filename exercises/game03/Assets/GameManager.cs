@@ -13,9 +13,6 @@ public class GameManager : MonoBehaviour
     int gridWidth = 30;
     int gridHeight = 75;
 
-    //float cellWidth = 0.8f;
-    //float cellHeight = 0.8f;
-
     float cellDimension = 3;
     float padding = 0.9f;
 
@@ -30,7 +27,7 @@ public class GameManager : MonoBehaviour
         for (int x = 0; x < gridWidth; x++) {
             for (int y = 0; y < gridHeight; y++) {
                 Vector3 pos = new Vector3(x * (cellDimension + padding), 0, y * (cellDimension + padding));
-                GameObject cellObj = Instantiate(cellPrefab, pos, Quaternion.identity); // Don't rotate.
+                GameObject cellObj = Instantiate(cellPrefab, pos, Quaternion.identity); // Prevents rotation
                 cellObj.transform.localScale = new Vector3(cellDimension, cellDimension, cellDimension); // Square
                 CellScript cs = cellObj.GetComponent<CellScript>();
                 cs.x = x;
