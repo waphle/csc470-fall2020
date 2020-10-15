@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlaneController : MonoBehaviour
 {
     public Rigidbody rb;
+
+    public GameObject BalloonPrefab;
+
+    public Text scoreText;
+    int score = 0;
 
     float speed = 20;
 
@@ -56,12 +62,19 @@ public class PlaneController : MonoBehaviour
         Camera.main.transform.position = cameraPosition;
         Vector3 lookAtPos = transform.position + transform.forward * 8;
         Camera.main.transform.LookAt(lookAtPos, Vector3.up);
+
+        if (Input.GetKeyDown(Keycode.Space))
+        {
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ring"))
         {
+            score++;
+            scoreText.text = score.ToString();
             Debug.Log("Ring Collected!");
         }
     }
