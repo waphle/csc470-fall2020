@@ -63,9 +63,12 @@ public class PlaneController : MonoBehaviour
         Vector3 lookAtPos = transform.position + transform.forward * 8;
         Camera.main.transform.LookAt(lookAtPos, Vector3.up);
 
-        if (Input.GetKeyDown(Keycode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            GameObject balloon = Instantiate(BalloonPrefab, transform.position + transform.forward * 3, Quaternion.identity);
+            Rigidbody balloonRB = balloon.GetComponent<Rigidbody>();
+            balloonRB.AddForce(transform.forward * 4000);
+            Destroy(balloon, 5);
         }
     }
 
