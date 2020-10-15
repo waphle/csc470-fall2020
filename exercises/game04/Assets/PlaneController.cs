@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlaneController : MonoBehaviour
 {
-    float speed = 15;
+    public Rigidbody rb;
+
+    float speed = 20;
 
     float forwardSpeed = 1;
 
     float pitchSpeed = 80;
+    float pitchModSpeedRate = 0.5f;
     float rollSpeed = 80;
 
 
@@ -22,17 +25,25 @@ public class PlaneController : MonoBehaviour
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        transform.Rotate(vAxis * pitchSpeed * Time.deltaTime, hAxis * rollSpeed * Time.deltaTime, 0, Space.Self);
+        float xRot = vAxis * pitchSpeed * Time.deltaTime;
+        float yRot = hAxis * rollSpeed / 4 * Time.deltaTime;
+        float zRot = -hAxis * rollSpeed * Time.deltaTime;
+        transform.Rotate(xRot, yRot, zRot, Space.Self);
 
-        forwardSpeed += -transform.forward.y * 10 * Time.deltaTime;
-
+        forwardSpeed += -transform.forward.y * pitchModSpeedRate * Time.deltaTime;
         forwardSpeed = Mathf.Clamp(forwardSpeed, 0, speed * 2);
 
         transform.Translate(transform.forward * speed * forwardSpeed * Time.deltaTime, Space.World);
 
-        if (forwardSpeed <= 0)
+        //if (forwardSpeed <= 0)
+        //{
+        //    transform.Translate(Vector3.down * speed/40 * Time.deltaTime, Space.World);
+        //}
+
+        if (forwardSpeed <= 0.3f)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            rb.isKinematic = false;
+            rb.useGravity = true;
         }
 
         float terrainHeight = Terrain.activeTerrain.SampleHeight(transform.position);
@@ -40,6 +51,11 @@ public class PlaneController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, terrainHeight, transform.position.z);
         }
+
+        Vector3 cameraPosition = transform.position - transform.forward * 12 + Vector3.up * 5;
+        Camera.main.transform.position = cameraPosition;
+        Vector3 lookAtPos = transform.position + transform.forward * 8;
+        Camera.main.transform.LookAt(lookAtPos, Vector3.up);
     }
 
     private void OnTriggerEnter(Collider other)
