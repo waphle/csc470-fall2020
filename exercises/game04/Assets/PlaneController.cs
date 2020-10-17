@@ -14,11 +14,11 @@ public class PlaneController : MonoBehaviour
 
     float speed = 20;
 
-    float forwardSpeed = 1;
+    float forwardSpeed = 3;
 
-    float pitchSpeed = 80;
-    float pitchModSpeedRate = 0.5f;
-    float rollSpeed = 80;
+    float pitchSpeed = 120;
+    float pitchModSpeedRate = 2f;
+    float rollSpeed = 120;
 
 
     void Start()
