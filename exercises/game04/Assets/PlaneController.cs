@@ -67,7 +67,7 @@ public class PlaneController : MonoBehaviour
         {
             GameObject balloon = Instantiate(BalloonPrefab, transform.position + transform.forward * 3, Quaternion.identity);
             Rigidbody balloonRB = balloon.GetComponent<Rigidbody>();
-            balloonRB.AddForce(transform.forward * 4000);
+            balloonRB.AddForce(transform.forward * 6000);
             Destroy(balloon, 5);
         }
     }
