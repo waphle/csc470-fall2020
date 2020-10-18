@@ -41,12 +41,7 @@ public class PlaneController : MonoBehaviour
 
         transform.Translate(transform.forward * speed * forwardSpeed * Time.deltaTime, Space.World);
 
-        //if (forwardSpeed <= 0)
-        //{
-        //    transform.Translate(Vector3.down * speed/40 * Time.deltaTime, Space.World);
-        //}
-
-        if (forwardSpeed <= 0.3f)
+        if (forwardSpeed <= 0.5f)
         {
             rb.isKinematic = false;
             rb.useGravity = true;
@@ -63,22 +58,23 @@ public class PlaneController : MonoBehaviour
         Vector3 lookAtPos = transform.position + transform.forward * 8;
         Camera.main.transform.LookAt(lookAtPos, Vector3.up);
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GameObject balloon = Instantiate(BalloonPrefab, transform.position + transform.forward * 3, Quaternion.identity);
             Rigidbody balloonRB = balloon.GetComponent<Rigidbody>();
             balloonRB.AddForce(transform.forward * 10000);
-            Destroy(balloon, 5);
+            Destroy(balloon, 3);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("ufo"))
-        {
-            score++;
-            scoreText.text = score.ToString();
-            Debug.Log("UFO Shot Down!");
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("ufo"))
+    //    {
+    //        score++;
+    //        scoreText.text = score.ToString();
+    //        Debug.Log("UFO Shot Down!");
+
+    //    }
+    //}
 }
