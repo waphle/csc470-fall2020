@@ -63,22 +63,22 @@ public class PlaneController : MonoBehaviour
         Vector3 lookAtPos = transform.position + transform.forward * 8;
         Camera.main.transform.LookAt(lookAtPos, Vector3.up);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             GameObject balloon = Instantiate(BalloonPrefab, transform.position + transform.forward * 3, Quaternion.identity);
             Rigidbody balloonRB = balloon.GetComponent<Rigidbody>();
-            balloonRB.AddForce(transform.forward * 6000);
+            balloonRB.AddForce(transform.forward * 10000);
             Destroy(balloon, 5);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ring"))
+        if (other.CompareTag("ufo"))
         {
             score++;
             scoreText.text = score.ToString();
-            Debug.Log("Ring Collected!");
+            Debug.Log("UFO Shot Down!");
         }
     }
 }
