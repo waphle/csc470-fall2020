@@ -12,12 +12,12 @@ public class PlaneController : MonoBehaviour
     public Text scoreText;
     int score = 0;
 
-    float speed = 20;
+    float speed = 30;
 
     float forwardSpeed = 3;
 
     float pitchSpeed = 120;
-    float pitchModSpeedRate = 2f;
+    float pitchModSpeedRate = 1f;
     float rollSpeed = 120;
 
 
