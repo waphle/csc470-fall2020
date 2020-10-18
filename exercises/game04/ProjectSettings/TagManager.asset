@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ring
   - hotairballoon
+  - ufo
   layers:
   - Default
   - TransparentFX
