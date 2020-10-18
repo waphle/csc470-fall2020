@@ -20,6 +20,9 @@ public class PlaneController : MonoBehaviour
     float pitchModSpeedRate = 1f;
     float rollSpeed = 120;
 
+    float zAxis = 2f;
+    Vector3 mousePosition; 
+
 
     void Start()
     {
@@ -52,6 +55,11 @@ public class PlaneController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, terrainHeight, transform.position.z);
         }
+
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = zAxis;
+        //If you get an error with the above line, replace it with this:
+        //mousePosition = new Vector3(mousePosition.x, mousePosition.y, zAxis);
 
         Vector3 cameraPosition = transform.position - transform.forward * 12 + Vector3.up * 5;
         Camera.main.transform.position = cameraPosition;
