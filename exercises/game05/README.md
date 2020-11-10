@@ -1,8 +1,7 @@
 game05 Jeff Zhang
 ======
 
-## Overview
-**Castle Defense!**
+## Fortification Patrol ##
 Command a battalion of defenders from your castle against a wave of barbaric warriors! 
 You can shoot arrows, throw stones, and pour boiling oil down on the invaders. The invaders will attack the castle walls
 and front gate. Both the wall and gate will have health. If one of them falls, you lose! Your defenders will have health too; the attackers
