@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         {
             // If we get in here, it means that the toSelect parameter was null, and that means that we 
             // should deactivate the namePanel.
-            namePanel.SetActive(false);
+            namePanel.SetActive(true);
         }
     }
 
