@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject namePanel;
     public Text nameText;
     //public MeterScript healthMeter;
-    //public MeterScript charismaMeter;
+    //public MeterScript ammoMeter;
+
+    public Image healthImage;
+    public Image ammoImage;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour
             // If there is a selected, mark it as selected, update its visuals, and update the UI elements.
             selectedUnit.selected = true;
 
-            //UpdateUI(selectedUnit);
+            UpdateUI(selectedUnit);
 
             selectedUnit.UpdateVisuals();
         }
@@ -68,12 +71,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //public void UpdateUI(UnitScript unit)
-    //{
-    //    healthMeter.SetMeter(unit.health / 100f);
-    //    charismaMeter.SetMeter(unit.charisma / 18f);
-    //    nameText.text = unit.unitName;
-    //    namePanel.SetActive(true);
-    //}
+    public void UpdateUI(UnitScript unit)
+    {
+        //healthMeter.SetMeter(unit.health / 100f);
+        //ammoMeter.SetMeter(unit.ammo / 18f);
+        healthImage.fillAmount = unit.health / 100f;
+        ammoImage.fillAmount = unit.ammo / 18f;
+        nameText.text = unit.unitName;
+        namePanel.SetActive(true);
+    }
 }
 
