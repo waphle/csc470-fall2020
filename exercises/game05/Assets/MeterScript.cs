@@ -15,7 +15,7 @@ public class MeterScript : MonoBehaviour
     void Start()
     {
         labelText.text = label;
-        //meterForeground.material.color = meterColor;
+        meterForeground.color = meterColor;
     }
 
     // Update is called once per frame
