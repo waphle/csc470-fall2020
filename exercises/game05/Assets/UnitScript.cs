@@ -9,7 +9,7 @@ public class UnitScript : MonoBehaviour
 
     public string unitName;
     public int health = 100;
-    public int charisma;
+    public int ammo;
 
     // When the unit is selected, and the player clicks on the ground, it will instantiate a cube and add it to this
     // list. When the player presses the "Go!" button, the unit will start moving toward the first cube. When it

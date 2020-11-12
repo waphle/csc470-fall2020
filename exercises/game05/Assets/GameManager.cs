@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < units.Length; i++)
         {
             UnitScript unitScript = units[i].GetComponent<UnitScript>();
-            unitScript.selected = true;
+            unitScript.selected = false;
             unitScript.UpdateVisuals();
         }
 
