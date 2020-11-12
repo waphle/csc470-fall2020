@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject namePanel;
     public Text nameText;
-    //public MeterScript healthMeter;
-    //public MeterScript ammoMeter;
+    public MeterScript healthMeter;
+    public MeterScript ammoMeter;
 
-    public Image healthImage;
-    public Image ammoImage;
+    //public Image healthImage;
+    //public Image ammoImage;
 
     // Start is called before the first frame update
     void Start()
@@ -73,10 +73,10 @@ public class GameManager : MonoBehaviour
 
     public void UpdateUI(UnitScript unit)
     {
-        //healthMeter.SetMeter(unit.health / 100f);
-        //ammoMeter.SetMeter(unit.ammo / 18f);
-        healthImage.fillAmount = unit.health / 100f;
-        ammoImage.fillAmount = unit.ammo / 18f;
+        healthMeter.SetMeter(unit.health / 100f);
+        ammoMeter.SetMeter(unit.ammo / 18f);
+        //healthImage.fillAmount = unit.health / 100f;
+        //ammoImage.fillAmount = unit.ammo / 18f;
         nameText.text = unit.unitName;
         namePanel.SetActive(true);
     }
