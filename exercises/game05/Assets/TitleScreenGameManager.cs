@@ -23,4 +23,14 @@ public class TitleScreenGameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level");
     }
+
+    public void ShowInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
+
+    public void GoBackPage()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
 }
