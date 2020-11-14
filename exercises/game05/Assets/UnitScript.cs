@@ -15,7 +15,6 @@ public class UnitScript : MonoBehaviour
     int pathIndex = 0;
     bool moving = false;
 
-    
     float speed = 5f;
     float rotateSpeed = 4f;
 
@@ -23,7 +22,7 @@ public class UnitScript : MonoBehaviour
 
     public bool selected = false;
     public bool hover = false;
-.
+
     public Color defaultColor;
     public Color hoverColor;
     public Color selectedColor;
@@ -32,9 +31,9 @@ public class UnitScript : MonoBehaviour
 
     public CharacterController cc;
 
-    // Start is called before the first frame update
     void Start()
     {
+
         UpdateVisuals();
 
         path = new List<GameObject>();
@@ -87,6 +86,7 @@ public class UnitScript : MonoBehaviour
         {
             if (moving && path.Count > 0)
             {
+
                 pathIndex++;
                 if (pathIndex == path.Count)
                 {
@@ -149,7 +149,6 @@ public class UnitScript : MonoBehaviour
     private void OnMouseDown()
     {
         selected = !selected;
-
         if (selected)
         {
             gm.SelectUnit(this);
