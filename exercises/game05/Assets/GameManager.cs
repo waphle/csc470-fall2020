@@ -35,17 +35,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // This function takes a Unit's UnitScript, makes it selected, and deselects any other units that were selected.
-    // If null is passed in, it will just deselect everything.
-    // This function also populates the nameText UI element with the currently selected unit's name, and also ensures
-    // that the namePanel UI element is only active is a unit is selected.
     public void SelectUnit(UnitScript toSelect)
     {
         selectedUnit = toSelect;
 
-        // Get an array of all GameObjects that have the tag "Unit".
         GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
-        // Loop through all units and make sure they are not selected.
+
         for (int i = 0; i < units.Length; i++)
         {
             UnitScript unitScript = units[i].GetComponent<UnitScript>();
@@ -56,7 +51,6 @@ public class GameManager : MonoBehaviour
 
         if (toSelect != null)
         {
-            // If there is a selected, mark it as selected, update its visuals, and update the UI elements.
             selectedUnit.selected = true;
 
             UpdateUI(selectedUnit);
@@ -65,8 +59,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // If we get in here, it means that the toSelect parameter was null, and that means that we 
-            // should deactivate the namePanel.
             namePanel.SetActive(true);
         }
     }
