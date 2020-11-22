@@ -7,7 +7,7 @@ In this game, you drive a retro-futuristic car in a cyberpunk world to complete 
 ### Game Plan
 1. The core mechanic is a driving simulator on a long stretch of road. Ramps, corners, and obstacles will be found on the
 road. Collect cassette tapes on the road to earn points and avoid the obstacles! The points will be displayed on a corner via
-canvas text. 
+canvas text. I aim the game to seem "over the top" in order to somewhat replicate cliche 80's action movies and arcade games.
 2. Input: Controlled with WASD, viewed in third-person.
 3. Synthwave and music based on the game *Distance*. 
 * [Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
