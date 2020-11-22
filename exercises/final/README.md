@@ -10,8 +10,8 @@ road. When you collect important cassette tapes on the road, you earn points! Th
 canvas text. 
 2. Input: Controlled with WASD, viewed in third-person.
 3. Synthwave and music based on the game *Distance*. 
-  *[Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
-  *[Example 2.](https://www.youtube.com/watch?v=5do8jwFnf5E)
+* [Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
+* [Example 2.](https://www.youtube.com/watch?v=5do8jwFnf5E)
 4. [Imgur link to interface design.](https://i.imgur.com/o6cC4Eb.png)
 5. You have been tasked by the Miami Police Department to collect the cassette tapes thrown on the road by a criminal goon.
 These tapes contain valuable blackmail against a crime lord. Collect all 15 tapes to win the game. But be careful! The road
