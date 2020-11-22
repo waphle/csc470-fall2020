@@ -13,9 +13,9 @@ canvas text.
 * [Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
 * [Example 2.](https://www.youtube.com/watch?v=5do8jwFnf5E)
 4. [Imgur link to interface design.](https://i.imgur.com/o6cC4Eb.png)
-5. You have been tasked by the Miami Police Department to collect the cassette tapes thrown on the road by a criminal goon.
-These tapes contain valuable blackmail against a crime lord. Collect all 15 tapes to win the game. But be careful! The road
-is riddled with obstacles, such as cars, traps left behind by the criminals, and other hazards. 
+5. It is 1984. You are Miami's greatest detective, and you have been tasked by the police chief to collect the cassette tapes lost by 
+a crime lord's goon during a high-speed chase. These tapes contain valuable blackmail against said crime lord. Collect all 15 tapes to win the game, 
+but be careful! The road is riddled with obstacles, such as other drivers, booby traps left behind by the criminals, and other hazards. 
 
 ## Set Targets ##
 1. A fully designed road, the player's car is drivable, and the surrounding environment has been established (skybox, buildings, etc.)
