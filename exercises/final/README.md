@@ -16,7 +16,7 @@ canvas text. I aim the game to seem "over the top" in order to somewhat replicat
 5. It is 1984. You are Miami's greatest detective, and you have been tasked by the police chief to collect the cassette tapes lost by 
 a crime lord's goon during a high-speed chase. These tapes contain valuable blackmail against said crime lord. Collect all 15 tapes to win the game, 
 but be careful! The road is riddled with obstacles, such as other drivers, booby traps left behind by the criminals, and other hazards. 
-My game will be partially inspired by short films like [Kung Fury](https://www.youtube.com/watch?v=nO_DIwuGBnA) and games such as Cyberpunk 2077.
+My game will be partially inspired by short films like [Kung Fury](https://i.imgur.com/i2O2igg.gif) and games such as Cyberpunk 2077.
 
 ## Set Targets ##
 1. A fully designed road, the player's car is drivable, and the surrounding environment has been established (skybox, buildings, etc.)
