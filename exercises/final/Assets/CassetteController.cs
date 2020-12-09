@@ -12,7 +12,7 @@ public class CassetteController : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 45 * Time.deltaTime, 0); // Rotate UFO on its y axis clockwise 45 degrees per second
+        transform.Rotate(0, 60 * Time.deltaTime, 0); // Rotate UFO on its y axis clockwise 60 degrees per second
     }
 
     private void OnTriggerEnter(Collider other)
