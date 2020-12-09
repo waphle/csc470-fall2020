@@ -26,22 +26,22 @@ public class CarController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name == "LeftWall")
-        {
-            float pushForce = 500f; // speed of car and wall collision bounce
-            Vector3 dir = col.contacts[0].point - transform.position;
-            dir = -dir.normalized;
-            GetComponent<Rigidbody>().AddForce(dir * pushForce);
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.gameObject.name == "LeftWall")
+    //    {
+    //        float pushForce = 10f; // speed of car and wall collision bounce
+    //        Vector3 dir = col.contacts[0].point - transform.position;
+    //        dir = -dir.normalized;
+    //        GetComponent<Rigidbody>().AddForce(dir * pushForce);
 
-            //// how much the character should be knocked back
-            //var magnitude = 100000;
-            //// calculate force vector
-            //var force = transform.position - col.transform.position;
-            //// normalize force vector to get direction only and trim magnitude
-            //force.Normalize();
-            //gameObject.GetComponent<Rigidbody>().AddForce(force * magnitude);
-        }
-    }
+    //        //// how much the character should be knocked back
+    //        //var magnitude = 100000;
+    //        //// calculate force vector
+    //        //var force = transform.position - col.transform.position;
+    //        //// normalize force vector to get direction only and trim magnitude
+    //        //force.Normalize();
+    //        //gameObject.GetComponent<Rigidbody>().AddForce(force * magnitude);
+    //    }
+    //}
 }
