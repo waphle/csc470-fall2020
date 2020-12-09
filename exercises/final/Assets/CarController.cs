@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarController : MonoBehaviour
 {
     public float speed = 0.1f; // Speed customization
+    public Text scoreText;
+    int score = 0;
 
-    // Update is called once per frame
     void Update()
     {
         float xDirection = Input.GetAxis("Horizontal"); // Left and Right movements
@@ -16,5 +18,13 @@ public class CarController : MonoBehaviour
                                                                                // car from moving vertically up and down
 
         transform.position += movementDirection * speed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("cassette"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

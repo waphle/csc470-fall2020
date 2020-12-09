@@ -1,18 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CassetteController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text scoreText;
+    int score = 0;
 
-    // Update is called once per frame
+    public GameObject CarPrefab;
+
     void Update()
     {
         transform.Rotate(0, 45 * Time.deltaTime, 0); // Rotate UFO on its y axis clockwise 45 degrees per second
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("car"))
+        {
+            score++;
+            scoreText.text = score.ToString();
+            Debug.Log("Cassette Tape Collected!");
+        }
     }
 }
