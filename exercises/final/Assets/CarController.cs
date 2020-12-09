@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarManager : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     public float speed = 0.1f; // Speed customization
 
