@@ -21,6 +21,7 @@ public class CassetteController : MonoBehaviour
         {
             score++;
             scoreText.text = score.ToString();
+
             Debug.Log("Cassette Tape Collected!");
         }
     }

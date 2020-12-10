@@ -7,6 +7,8 @@ public class CarController : MonoBehaviour
 {
     public float speed = 0.1f; // Speed of car customization
 
+    int lives = 0;
+
     void Update()
     {
         float xDirection = Input.GetAxis("Horizontal"); // Left and Right movements
@@ -24,24 +26,11 @@ public class CarController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("obstacle"))
+        {
+            lives++;
+            Debug.Log("You lost your " + lives + " life.");
+        }        
     }
-
-    //void OnCollisionEnter(Collision col)
-    //{
-    //    if (col.gameObject.name == "LeftWall")
-    //    {
-    //        float pushForce = 10f; // speed of car and wall collision bounce
-    //        Vector3 dir = col.contacts[0].point - transform.position;
-    //        dir = -dir.normalized;
-    //        GetComponent<Rigidbody>().AddForce(dir * pushForce);
-
-    //        //// how much the character should be knocked back
-    //        //var magnitude = 100000;
-    //        //// calculate force vector
-    //        //var force = transform.position - col.transform.position;
-    //        //// normalize force vector to get direction only and trim magnitude
-    //        //force.Normalize();
-    //        //gameObject.GetComponent<Rigidbody>().AddForce(force * magnitude);
-    //    }
-    //}
 }
