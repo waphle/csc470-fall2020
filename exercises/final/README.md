@@ -5,9 +5,9 @@ Final - Jeff Zhang
 In this game, you drive a retro-futuristic car in a cyberpunk world to complete objectives!
 
 ### Game Plan
-1. The core mechanic is a driving simulator on a long stretch of road. Ramps, corners, and obstacles will be found on the
+1. The core mechanic is a driving simulator on a long stretch of road. Obstacles will be found on the
 road. Collect cassette tapes on the road to earn points and avoid the obstacles! The points will be displayed on a corner via
-canvas text. I aim the game to seem "over the top" in order to somewhat replicate cliche 80's action movies and arcade games.
+canvas text. I aim the game to be reminiscent of old arcade games.
 2. Input: Controlled with WASD, viewed in third-person.
 3. Synthwave and music based on the game *Distance*. 
 * [Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
@@ -17,7 +17,7 @@ canvas text. I aim the game to seem "over the top" in order to somewhat replicat
 * [Behind the scenes.](https://i.imgur.com/wuH9hWe.png)
 * [Scenery.](https://i.imgur.com/iCqPJTr.png)
 
-5. It is 1984. You are Miami's greatest detective, and you have been tasked by the police chief to collect the cassette tapes lost by 
+5. Story: It is 1984. You are Miami's greatest detective, and you have been tasked by the police chief to collect the cassette tapes lost by 
 a crime lord's goon during a high-speed chase. These tapes contain valuable blackmail against said crime lord. Collect all 15 tapes to win the game, 
 but be careful! The road is riddled with obstacles, such as other drivers, booby traps left behind by the criminals, and other hazards. 
 My game will be partially inspired by short films like [Kung Fury](https://i.imgur.com/i2O2igg.gif) and games such as Cyberpunk 2077.
