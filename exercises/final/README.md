@@ -12,7 +12,11 @@ canvas text. I aim the game to seem "over the top" in order to somewhat replicat
 3. Synthwave and music based on the game *Distance*. 
 * [Example 1.](https://www.youtube.com/watch?v=9VcfMlP2Vk0)
 * [Example 2.](https://www.youtube.com/watch?v=5do8jwFnf5E)
-4. [Screenshot of the game.](https://i.imgur.com/JnS2lRm.png)
+4. Screenshots 
+* [In-game.](https://i.imgur.com/JnS2lRm.png)
+* [Behind the scenes.](https://i.imgur.com/wuH9hWe.png)
+* [Scenery.](https://i.imgur.com/iCqPJTr.png)
+
 5. It is 1984. You are Miami's greatest detective, and you have been tasked by the police chief to collect the cassette tapes lost by 
 a crime lord's goon during a high-speed chase. These tapes contain valuable blackmail against said crime lord. Collect all 15 tapes to win the game, 
 but be careful! The road is riddled with obstacles, such as other drivers, booby traps left behind by the criminals, and other hazards. 
