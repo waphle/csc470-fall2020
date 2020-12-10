@@ -14,7 +14,7 @@ public class CarController : MonoBehaviour
 
     }
 
-    void Update()
+    private void Update()
     {
         float xDirection = Input.GetAxis("Horizontal"); // Left and Right movements
         float zDirection = Input.GetAxis("Vertical"); // Forward and Backward movements
