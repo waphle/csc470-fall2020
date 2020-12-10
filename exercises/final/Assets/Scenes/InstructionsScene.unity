@@ -245,11 +245,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 956933757}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 259.5}
+  m_AnchoredPosition: {x: 5, y: 200}
   m_SizeDelta: {x: 393.51038, y: 91.799576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240911505
@@ -327,11 +327,11 @@ RectTransform:
   m_Children:
   - {fileID: 2065011975}
   m_Father: {fileID: 956933757}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.2, y: -275}
+  m_AnchoredPosition: {x: 10.2, y: -201}
   m_SizeDelta: {x: 255.02493, y: 81.21304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341791471
@@ -634,12 +634,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 956933757}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.3, y: -13}
-  m_SizeDelta: {x: 712.6112, y: 392.95642}
+  m_AnchoredPosition: {x: 9.3, y: 2}
+  m_SizeDelta: {x: 712.6112, y: 246.39209}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779772563
 MonoBehaviour:
@@ -663,7 +663,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2eebbd7bf5aac7d49b8d367403fc43b8, type: 3}
-    m_FontSize: 52
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -809,10 +809,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 860, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -851,9 +851,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 341791470}
   - {fileID: 240911504}
   - {fileID: 779772562}
+  - {fileID: 341791470}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -939,7 +939,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3c1271f0287c83d41beaecabe8ab569e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b4e2cc00489b874ab753bbbc502ad3b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1

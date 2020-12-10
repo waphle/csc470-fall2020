@@ -9,6 +9,11 @@ public class CarController : MonoBehaviour
 
     int lives = 0;
 
+    void Start()
+    {
+
+    }
+
     void Update()
     {
         float xDirection = Input.GetAxis("Horizontal"); // Left and Right movements
@@ -20,7 +25,7 @@ public class CarController : MonoBehaviour
         transform.position += movementDirection * speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("cassette"))
         {

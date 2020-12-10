@@ -1220,7 +1220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -302}
+  m_AnchoredPosition: {x: 338, y: -250}
   m_SizeDelta: {x: 254.66245, y: 26.959167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321609413
@@ -5526,7 +5526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352.5, y: 264.5}
+  m_AnchoredPosition: {x: -284.9, y: 240.2}
   m_SizeDelta: {x: 59.97046, y: 50.998077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558565191
@@ -6945,10 +6945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -7032,7 +7032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -448.8, y: 264.5}
+  m_AnchoredPosition: {x: -381.2, y: 240.19998}
   m_SizeDelta: {x: 142.13461, y: 50.998077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013790914
@@ -7455,6 +7455,7 @@ GameObject:
   - component: {fileID: 2108429977}
   - component: {fileID: 2108429976}
   - component: {fileID: 2108429980}
+  - component: {fileID: 2108429981}
   m_Layer: 0
   m_Name: EndgameTriggerer
   m_TagString: endgameTriggerer
@@ -7554,6 +7555,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2108429981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108429975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2e9df1fee68dc45a34ed7ee9c46e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2831233800181556505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7563,7 +7576,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1414651266429483811, guid: 426bfdca57c96e042951ddd7641ac801, type: 3}
       propertyPath: far clip plane
-      value: 40000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 1650528907297216779, guid: 426bfdca57c96e042951ddd7641ac801, type: 3}
       propertyPath: m_Name
@@ -7599,7 +7612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357510556716767073, guid: 426bfdca57c96e042951ddd7641ac801, type: 3}
       propertyPath: speed
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7274976948873882949, guid: 426bfdca57c96e042951ddd7641ac801, type: 3}
       propertyPath: m_LocalPosition.x

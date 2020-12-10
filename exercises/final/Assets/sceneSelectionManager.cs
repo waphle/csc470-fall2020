@@ -33,4 +33,12 @@ public class sceneSelectionManager : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScreen");
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("car"))
+        {
+            SceneManager.LoadScene("CompletionScreen");
+        }
+    }
 }
