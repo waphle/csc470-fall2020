@@ -7,6 +7,9 @@ public class CarController : MonoBehaviour
 {
     public float speed = 0.1f; // Speed of car customization
 
+    public int scoreAmount = 0;
+    public Text scoreText;
+
     int lives = 0;
 
     void Start()
@@ -19,7 +22,7 @@ public class CarController : MonoBehaviour
         float xDirection = Input.GetAxis("Horizontal"); // Left and Right movements
         float zDirection = Input.GetAxis("Vertical"); // Forward and Backward movements
 
-        Vector3 movementDirection = new Vector3(xDirection, 0.0f, zDirection); // 0.0f in the Y section prevents the 
+        Vector3 movementDirection = new Vector3(xDirection * Time.deltaTime, 0.0f, zDirection * Time.deltaTime); // 0.0f in the Y section prevents the 
                                                                                // car from moving vertically up and down
 
         transform.position += movementDirection * speed;
@@ -29,6 +32,9 @@ public class CarController : MonoBehaviour
     {
         if (other.CompareTag("cassette"))
         {
+            scoreAmount = scoreAmount + 1;
+            scoreText.text = scoreAmount.ToString();
+
             Destroy(other.gameObject);
         }
 

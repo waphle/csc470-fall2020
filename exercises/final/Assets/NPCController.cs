@@ -14,9 +14,9 @@ public class NPCController : MonoBehaviour
     void Update()
     {
         float speed = 6f;
-        float x = transform.position.x + transform.forward.x * speed;
-        float y = transform.position.y + transform.forward.y * speed;
-        float z = transform.position.z + transform.forward.z * speed;
+        float x = transform.position.x + Time.deltaTime * transform.forward.x * speed;
+        float y = transform.position.y + Time.deltaTime * transform.forward.y * speed;
+        float z = transform.position.z + Time.deltaTime * transform.forward.z * speed;
         transform.position = new Vector3(-x, -y, z);
     }
 }

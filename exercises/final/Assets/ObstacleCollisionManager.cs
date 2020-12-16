@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class ObstacleCollisionManager : MonoBehaviour
 {
-    public Color redcolor;
-    public Color bluecolor;
+    public Color defaultColor;
+    public Color hitColor;
+
+    public AudioSource playSound;
 
     void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("car"))
         {
-            Debug.Log("Collision");
-            transform.GetComponent<Renderer>().material.color = redcolor;
+            playSound.Play();
+            transform.GetComponent<Renderer>().material.color = hitColor;
+
+            Debug.Log("Collision Detected");
         }
     }
 

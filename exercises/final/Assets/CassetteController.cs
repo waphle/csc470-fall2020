@@ -5,23 +5,20 @@ using UnityEngine.UI;
 
 public class CassetteController : MonoBehaviour
 {
-    public Text scoreText;
-    int score = 0;
-
     public GameObject CarPrefab;
+
+    public AudioSource playSound;
 
     void Update()
     {
-        transform.Rotate(0, 90 * Time.deltaTime, 0); // Rotate UFO on its y axis clockwise 90 degrees per second
+        transform.Rotate(0, 90 * Time.deltaTime, 0); // Rotate on its y axis clockwise 90 degrees per second
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("car"))
         {
-            score++;
-            scoreText.text = score.ToString();
-
+            playSound.Play();
             Debug.Log("Cassette Tape Collected!");
         }
     }
